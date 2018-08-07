@@ -524,3 +524,50 @@ DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please ch
   Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
   Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (206.6ms)
+Started GET "/" for ::1 at 2018-08-07 15:45:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-08-07 15:46:42 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  Rendered pictures/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 208ms (Views: 196.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/test" for ::1 at 2018-08-07 15:46:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/test"):
+  
+
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [5 times] (1.8ms)
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.4ms)
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (146.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_grahamspencer__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___1310578471177052037_70100481985040 at /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (105.5ms)
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/grahamspencer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (247.1ms)
