@@ -269,3 +269,11 @@ Processing by PicturesController#show as HTML
 Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/pictures/new" for ::1 at 2018-08-07 15:22:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 211ms (Views: 201.3ms | ActiveRecord: 0.6ms)
+
+
