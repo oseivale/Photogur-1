@@ -277,3 +277,27 @@ Processing by PicturesController#new as HTML
 Completed 200 OK in 211ms (Views: 201.3ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/pictures/new" for ::1 at 2018-08-07 15:30:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 223ms (Views: 216.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pictures/new" for ::1 at 2018-08-07 15:33:19 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 18.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/pictures" for ::1 at 2018-08-07 15:33:28 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DooYgrmOU2gV/l8Uf3UTlkJclVG7OZvUCdyVGXbeeY6+fbMvMJuA4xe5lkKFDyhJOMZTNdUjJ5EkU8KmAgVD3Q==", "picture"=>{"artist"=>"Test1", "title"=>"Test1", "url"=>"Test1.com"}, "commit"=>"Save"}
+DEPRECATION WARNING: `render :text` is deprecated because it does not actually render a `text/plain` response. Switch to `render plain: 'plain text'` to render as `text/plain`, `render html: '<strong>HTML</strong>'` to render as `text/html`, or `render body: 'raw'` to match the deprecated behavior and render with the default Content-Type, which is `text/html`. (called from create at /Users/grahamspencer/Documents/Bitmaker/day21/photogur/app/controllers/pictures_controller.rb:16)
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
