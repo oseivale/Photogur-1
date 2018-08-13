@@ -14,10 +14,18 @@
   <% end %>
 </ul>
 
-<h1>Old Pictures (<%= @created_before.length %>)</h1>
+<h1>Older Pictures (<%= @created_before.length %>)</h1>
 
 <ul>
   <% @created_before.each do |picture| %>
+    <li><%= picture.title %></li>
+  <% end %>
+</ul>
+
+<h1>2017 Pictures (<%= @pictures_created_in_year.length %>)</h1>
+
+<ul>
+  <% @pictures_created_in_year.each do |picture| %>
     <li><%= picture.title %></li>
   <% end %>
 </ul>
