@@ -1,7 +1,10 @@
 class PicturesController < ApplicationController
 
   def index
+    date = 1.month.ago
     @most_recent_pictures = Picture.most_recent_five
+    @created_before = Picture.created_before(date)
+    @pictures = Picture.all
   end
 
   def show
@@ -51,6 +54,7 @@ class PicturesController < ApplicationController
     @picture.destroy
     redirect_to "/pictures"
   end
+
 
 
 end

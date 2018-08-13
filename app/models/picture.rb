@@ -1,7 +1,7 @@
 class Picture < ApplicationRecord
 
   def self.newest_first
-    Picutre.order("created_at DESC")
+    Picture.order("created_at DESC")
   end
 
   def self.most_recent_five
@@ -11,5 +11,9 @@ class Picture < ApplicationRecord
   def self.created_before(time)
     Picture.where("created_at < ?", time)
   end
+
+  # def self.pictures_created_in_year(year)
+  #   Picture.where("created_at LIKE ?", "#{year}%")
+  # end
 
 end
