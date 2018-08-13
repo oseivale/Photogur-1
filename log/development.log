@@ -1808,3 +1808,107 @@ Processing by PicturesController#show as HTML
 Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/pictures/1" for ::1 at 2018-08-13 16:36:53 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  Rendered pictures/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pictures/1/edit" for ::1 at 2018-08-13 16:36:54 -0400
+Processing by PicturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/edit.html.erb within layouts/application
+  Rendered pictures/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/pictures/1" for ::1 at 2018-08-13 16:36:57 -0400
+Processing by PicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"91HmZvyFx+rob7ewLbGtdvtV1kkvbXEZc2TvhO5T8VtFqTk7ySXRVEqthg4/fWNoksFjWsePjcKfClzSxGh3bg==", "picture"=>{"artist"=>"a", "title"=>"The old church on the coast of White sea", "url"=>"http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg"}, "commit"=>"Update Picture", "id"=>"1"}
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? AND ("pictures"."id" != ?) LIMIT ?[0m  [["url", "http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pictures/edit.html.erb within layouts/application
+  Rendered pictures/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/pictures/1" for ::1 at 2018-08-13 16:37:26 -0400
+Processing by PicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HMuQY/9HejCzsdb5VWBlqh0cdYD+Xhr+naDEcYMAiH+uM08+yudsjhFz50dHrKu0dIjAkxa85iVxzncnqTsOSg==", "picture"=>{"artist"=>"a", "title"=>"a", "url"=>"a"}, "commit"=>"Update Picture", "id"=>"1"}
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? AND ("pictures"."id" != ?) LIMIT ?[0m  [["url", "a"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pictures/edit.html.erb within layouts/application
+  Rendered pictures/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/pictures/1" for ::1 at 2018-08-13 16:37:46 -0400
+Processing by PicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p8CVHXBsDE3H9ItBg4np6wOfFWg/NnKysEw9d7AhXh4VOEpARcwa82U2uv+RRSf1aguge9fUjmlcIo4hmhrYKw==", "picture"=>{"artist"=>"", "title"=>"a", "url"=>""}, "commit"=>"Update Picture", "id"=>"1"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? AND ("pictures"."id" != ?) LIMIT ?[0m  [["url", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pictures/edit.html.erb within layouts/application
+  Rendered pictures/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/pictures/1" for ::1 at 2018-08-13 16:38:25 -0400
+Processing by PicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p8CVHXBsDE3H9ItBg4np6wOfFWg/NnKysEw9d7AhXh4VOEpARcwa82U2uv+RRSf1aguge9fUjmlcIo4hmhrYKw==", "picture"=>{"artist"=>"", "title"=>"a", "url"=>""}, "commit"=>"Update Picture", "id"=>"1"}
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? AND ("pictures"."id" != ?) LIMIT ?[0m  [["url", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pictures/edit.html.erb within layouts/application
+  Rendered pictures/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pictures/1" for ::1 at 2018-08-13 16:40:26 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  Rendered pictures/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pictures" for ::1 at 2018-08-13 16:40:29 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-13 20:40:29.037087')[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-13 20:40:29.037404')[0m
+  Rendered pictures/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pictures/new" for ::1 at 2018-08-13 16:40:30 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for ::1 at 2018-08-13 16:40:31 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2dVicQWKLWp+jB5T7dDNkT2cBpnZSb/KA6UUrmXD8Lpn4rU8bY+Cws4Acdde40oLWLFCY+H2iTEYCcEk6yJ9w==", "picture"=>{"artist"=>"", "title"=>"", "url"=>""}, "commit"=>"Save"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? LIMIT ?[0m  [["url", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+

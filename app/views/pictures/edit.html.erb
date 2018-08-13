@@ -2,7 +2,7 @@
 
 <% if @picture.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
+    <h2>Yarr, <%= pluralize(@picture.errors.count, "error") %> be found in yer form! Try again or walk the plank, ya scurvy dog!</h2>
 
     <ul>
     <% @picture.errors.full_messages.each do |msg| %>
