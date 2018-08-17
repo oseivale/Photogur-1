@@ -3424,3 +3424,81 @@ Processing by PicturesController#index as HTML
 Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:01:53 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:01:53.934136')[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:01:53.934250')[0m
+  Rendered pictures/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 29.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:02:01 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:02:01.874208')[0m
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:02:01.874559')[0m
+  Rendered pictures/index.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2018-08-17 15:03:04 -0400
+Processing by PicturesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 52ms (Views: 44.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2018-08-17 15:03:10 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1pQHVR6T3gqgx+2jsUIgXbOzaKRMNiBsl1HUuvxc9aD1+EZ3xoyFqdEWG5RYIDvY0pZX8mH4eRH503mKsozCw==", "picture"=>{"artist"=>"", "title"=>"", "url"=>"https://picsum.photos/g/458/354"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? LIMIT ?[0m  [["url", "https://picsum.photos/g/458/354"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 74ms (Views: 24.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2018-08-17 15:03:18 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1pQHVR6T3gqgx+2jsUIgXbOzaKRMNiBsl1HUuvxc9aD1+EZ3xoyFqdEWG5RYIDvY0pZX8mH4eRH503mKsozCw==", "picture"=>{"artist"=>"Valerie O", "title"=>"My life", "url"=>"https://picsum.photos/g/458/354"}, "commit"=>"Save"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? LIMIT ?[0m  [["url", "https://picsum.photos/g/458/354"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("artist", "title", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["artist", "Valerie O"], ["title", "My life"], ["url", "https://picsum.photos/g/458/354"], ["created_at", 2018-08-17 19:03:18 UTC], ["updated_at", 2018-08-17 19:03:18 UTC]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 32ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:03:18 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:03:18.243130')[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:03:18.243322')[0m
+  Rendered pictures/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pictures/7" for 127.0.0.1 at 2018-08-17 15:03:37 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  Rendered pictures/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 32.4ms | ActiveRecord: 0.6ms)
+
+
