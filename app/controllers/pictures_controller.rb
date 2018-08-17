@@ -1,5 +1,7 @@
 class PicturesController < ApplicationController
 
+before_action :ensure_logged_in, except: [:show, :index]
+
   def index
     month = 1.month.ago
     year = 1.year.ago
