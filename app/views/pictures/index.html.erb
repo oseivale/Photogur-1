@@ -1,4 +1,7 @@
 <h1>Pictures (<%= @pictures.length %>)</h1>
+
+<%= link_to "New User", new_users_path %>
+|
 <%= link_to("New Picture", "/pictures/new") %>
 
 <% @pictures.each do |picture| %>

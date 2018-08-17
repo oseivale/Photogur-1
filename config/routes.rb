@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :suggestion, only: %i[new create]
+  # resource :sessions, only: %i(new create destroy)
 
-  get 'users/new'
-
-  get 'users/create'
+  resource :users, only: %i(new create)
 
   root 'pictures#index'
   get 'pictures' => 'pictures#index'
