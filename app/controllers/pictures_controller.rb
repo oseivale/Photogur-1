@@ -27,6 +27,7 @@ before_action :ensure_logged_in, except: [:show, :index]
     @picture.artist = params[:picture][:artist]
     @picture.url = params[:picture][:url]
 
+    
     if @picture.save
       redirect_to "/pictures"
     else
