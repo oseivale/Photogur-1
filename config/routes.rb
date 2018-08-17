@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :suggestion, only: %i[new create]
+
+  get 'users/new'
+
+  get 'users/create'
+
   root 'pictures#index'
   get 'pictures' => 'pictures#index'
 
