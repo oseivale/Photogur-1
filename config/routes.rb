@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resource :sessions, only: %i(new create destroy)
 
-  resource :users, only: %i(new create)
+  resource :users, only: %i(new create destroy)
 
   root 'pictures#index'
   get 'pictures' => 'pictures#index'
