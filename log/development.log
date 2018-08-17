@@ -3502,3 +3502,308 @@ Processing by PicturesController#show as HTML
 Completed 200 OK in 39ms (Views: 32.4ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "pictures"[0m
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started DELETE "/sessions.current" for 127.0.0.1 at 2018-08-17 15:06:42 -0400
+Processing by SessionsController#destroy as 
+  Parameters: {"authenticity_token"=>"zneplwN07yU5GKuOgVchpiz48eHHZ8bRNT6F8jZ8wqV++hiTiBSSS7Tf7FZe8qnIOXxlHJ/Q/7TAhI9G90eCeA=="}
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:06:42 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:06:42.389810')[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:06:42.389954')[0m
+  Rendered pictures/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-08-17 15:06:44 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 52ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-08-17 15:06:50 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-17 15:07:08 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KGc59yXVPLQVrBVlDHGdi6/P5cR04HN28soxe/gLV5yY6ojzrrVB2phrUr3T1BXluktxOSxXShMHcDvPOTAXQQ==", "user"=>{"email"=>"fake@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fake@gmail.com"], ["password_digest", "$2a$10$eDRnNZV7M.2P8YdlVrV9AOLNAc0dvtOOZRGLx9vfLUVZ9GGe0dt1K"], ["created_at", 2018-08-17 19:07:08 UTC], ["updated_at", 2018-08-17 19:07:08 UTC]]
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 169ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 15:07:08 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:07:08.430449')[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:07:08.430532')[0m
+  Rendered pictures/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-08-17 15:07:19 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-08-17 15:08:28 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iOqb+LGKo6lKL291ak3JQznwLL9Y+t7DlUzlvDoMDsc4Zyr8Ourex8foKK216EEtLHS4QgBN56Zg9u8I+zdOGg==", "session"=>{"email"=>"fake@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fake@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 117ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:08:28 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:08:28.514468')[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:08:28.515027')[0m
+  Rendered pictures/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2018-08-17 15:09:51 -0400
+Processing by PicturesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2018-08-17 15:10:01 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yb9VLsschQ7cDuV4O6iocNdxAVnMx8iXbAryG42KUVjRMuQqQHz4YFHJoqDkDSAewvWVpJRw8fKZsPivTLERhQ==", "picture"=>{"artist"=>"Bob", "title"=>"computer", "url"=>"https://picsum.photos/458/354?image=0"}, "commit"=>"Save"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? LIMIT ?[0m  [["url", "https://picsum.photos/458/354?image=0"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("artist", "title", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["artist", "Bob"], ["title", "computer"], ["url", "https://picsum.photos/458/354?image=0"], ["created_at", 2018-08-17 19:10:01 UTC], ["updated_at", 2018-08-17 19:10:01 UTC]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 39ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:10:01 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:10:01.686566')[0m
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:10:01.686945')[0m
+  Rendered pictures/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/pictures/8" for 127.0.0.1 at 2018-08-17 15:20:36 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  Rendered pictures/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 36.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:20:52 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:20:52.214423')[0m
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:20:52.214743')[0m
+  Rendered pictures/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/pictures/new" for 127.0.0.1 at 2018-08-17 15:25:44 -0400
+Processing by PicturesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 13.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2018-08-17 15:26:03 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uS8LCyLwLWPJWiEhCDvllu8VBJfcWSr9GGsfR6Q8sf0JoroPqZBQDUSdZvnXnm34+pGQaoTuE5jt0RXzZQfxIA==", "picture"=>{"artist"=>"real@gmail.com", "title"=>"Sunny", "url"=>"https://picsum.photos/458/354?gravity=east"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `user_id`):
+  
+app/controllers/pictures_controller.rb:25:in `create'
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_valerie__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2799244400950985423_69849778038820 at /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.1ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.9ms)
+Started POST "/pictures" for 127.0.0.1 at 2018-08-17 15:26:14 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uS8LCyLwLWPJWiEhCDvllu8VBJfcWSr9GGsfR6Q8sf0JoroPqZBQDUSdZvnXnm34+pGQaoTuE5jt0RXzZQfxIA==", "picture"=>{"artist"=>"real@gmail.com", "title"=>"Sunny", "url"=>"https://picsum.photos/458/354?gravity=east"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `user_id`):
+  
+app/controllers/pictures_controller.rb:25:in `create'
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_valerie__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2799244400950985423_47355057585080 at /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.8ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/valerie/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to UserJoin (20180817193206)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to UserJoin (20180817193206)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to UserJoin (20180817193206)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "pictures" ADD "user_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817193206"]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/pictures" for 127.0.0.1 at 2018-08-17 15:43:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uS8LCyLwLWPJWiEhCDvllu8VBJfcWSr9GGsfR6Q8sf0JoroPqZBQDUSdZvnXnm34+pGQaoTuE5jt0RXzZQfxIA==", "picture"=>{"artist"=>"real@gmail.com", "title"=>"Sunny", "url"=>"https://picsum.photos/458/354?gravity=east"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? LIMIT ?[0m  [["url", "https://picsum.photos/458/354?gravity=east"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "pictures" ("artist", "title", "url", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["artist", "real@gmail.com"], ["title", "Sunny"], ["url", "https://picsum.photos/458/354?gravity=east"], ["created_at", 2018-08-17 19:43:36 UTC], ["updated_at", 2018-08-17 19:43:36 UTC], ["user_id", 3]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 37ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:43:37 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:43:37.008961')[0m
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:43:37.009166')[0m
+  Rendered pictures/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2018-08-17 15:43:58 -0400
+Processing by PicturesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 45ms (Views: 35.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2018-08-17 15:44:08 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0NqlROyVG3EJ7b6kwDoVp9D9YNoa1G0VL7sHZ4KhB59gVxRAZ/VmH4Qq+Xwfn53JxXn0J0JjVHDaAQ3TQ5pHQg==", "picture"=>{"artist"=>"me", "title"=>"moi", "url"=>"https://picsum.photos/458/354?random&time=1534535023980"}, "commit"=>"Save"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."url" = ? LIMIT ?[0m  [["url", "https://picsum.photos/458/354?random&time=1534535023980"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "pictures" ("artist", "title", "url", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["artist", "me"], ["title", "moi"], ["url", "https://picsum.photos/458/354?random&time=1534535023980"], ["created_at", 2018-08-17 19:44:08 UTC], ["updated_at", 2018-08-17 19:44:08 UTC], ["user_id", 3]]
+  [1m[35m (16.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 38ms (ActiveRecord: 20.9ms)
+
+
+Started GET "/pictures" for 127.0.0.1 at 2018-08-17 15:44:08 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2018-07-17 19:44:08.094984')[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at < '2017-08-17 19:44:08.095276')[0m
+  Rendered pictures/index.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 47.1ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY "pictures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ?[0m  [["user_id", 3]]
